@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодное приложение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Погодное приложение</h1>
+            <p class="subtitle">Погода в реальном времени</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="locationInput">Введите название города:</label>
+                    <input type="text" id="locationInput" placeholder="например: Москва, Париж, Токио">
+                    <button id="searchButton" class="btn-primary">Добавить виджет погоды</button>
+                </div>
+                
+                <div class="coord-input-group">
+                    <h3>Или введите координаты:</h3>
+                    <div class="coord-inputs">
+                        <input type="number" id="latitudeInput" placeholder="Широта (например: 56.8389)" step="any">
+                        <input type="number" id="longitudeInput" placeholder="Долгота (например: 60.6057)" step="any">
+                    </div>
+                    <button id="coordSearchButton" class="btn-secondary">Добавить по координатам</button>
+                </div>
+            </div>
+            
+            <div class="weather-widgets" id="weatherWidgetsContainer">
+                <div class="empty-state">
+                    <h3>Нет виджетов погоды</h3>
+                    <p>Найдите город или введите координаты, чтобы добавить первый виджет погоды</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
